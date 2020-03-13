@@ -1,0 +1,7 @@
+@users.map do |user|
+  {
+    username: user.username,
+    email: user.user_email,
+    tweets: user.tweets,
+  }
+end
