@@ -10,4 +10,12 @@ Rails.application.routes.draw do
     patch "/users/:id" => "users#update"
     delete "/users/:id" => "users#destroy"
   end
+
+  namespace :api do
+    get "/tweets" => "tweets#index"
+    post "/tweets" => "tweets#create"
+    get "/tweets/:id" => "tweets#show"
+    patch "/tweets/:id" => "tweets#update"
+    delete "/tweets/:id" => "tweets#destroy"
+  end
 end

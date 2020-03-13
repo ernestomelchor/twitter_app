@@ -9,8 +9,11 @@ class Api::UsersController < ApplicationController
       username: params["username"],
       user_email: params["email"],
     })
-    @user.save
-    render "create.json.jb"
+    if @user.save
+      render "create.json.jb"
+    else
+      render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   def show
