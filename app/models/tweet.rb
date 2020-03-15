@@ -6,6 +6,6 @@ class Tweet < ApplicationRecord
   end
 
   def friendly_created_at
-    created_at..strftime("%A, %b %d, %Y at:%l:%M %p")
+    created_at.strftime("%A, %b %d, %Y at:%l:%M %p")
   end
 end

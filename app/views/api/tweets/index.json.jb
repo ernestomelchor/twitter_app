@@ -3,5 +3,7 @@
     id: tweet.id,
     text: tweet.text,
     user_id: tweet.user_id,
+    created_at: tweet.friendly_created_at,
+    upated_at: tweet.friendly_updated_at,
   }
 end

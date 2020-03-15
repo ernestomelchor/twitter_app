@@ -1,5 +1,9 @@
 {
   username: @user.username,
   email: @user.user_email,
-  tweets: @user.tweets,
+  tweets: @user.tweets.map do |tweet|
+    { text: tweet.text,
+      created: tweet.friendly_created_at,
+      updated: tweet.friendly_updated_at }
+  end,
 }

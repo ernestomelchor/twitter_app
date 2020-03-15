@@ -2,4 +2,6 @@
   id: @tweet.id,
   text: @tweet.text,
   user_id: @tweet.user_id,
+  created: @tweet.friendly_created_at,
+  updated: @tweet.friendly_updated_at,
 }
